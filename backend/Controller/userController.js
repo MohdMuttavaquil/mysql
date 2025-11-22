@@ -2,7 +2,8 @@ import pool from '../Config/dbconfig.js'
 
 const verifyReq = async(req, res)=>{
 
-    const { name, email, userCalss, rollNo } = req.body
+    const { name, email, userCalss, rollNo } = req.body.data
+    console.log(name, email, userCalss, rollNo)
 
     try {
       await pool.query(`insert into users (name, email, class, roll_no) values (?,?,?,?)`,
