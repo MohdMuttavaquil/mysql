@@ -2,9 +2,14 @@ import pool from "../Config/dbconfig.js"
 
 const adamin = (req, res)=>{
     const { password } = req.body
+  
     try {
-        password === process.env.ADMAIN_PASSWORD
-        res.json({success: true, message:"login successfully"})
+       if(password === process.env.ADMAIN_PASSWORD){
+        return res.json({success: true, message:"login successfully"})
+       } else{
+        return res.json({success: false, message:"enter correct password"})
+       }
+     
     } catch (error) {
         console.log(error)
         res.json("some error")

@@ -24,7 +24,11 @@ const checkVerify = async (req, res)=>{
             [email]
         )
 
-        res.json(result)
+        if (result.length == 0) {
+            return res.json({success: false, message:"enter valid email"})
+        }
+
+        res.json({ success: true, result})
     } catch (error) {
         console.log(error)
         res.json("some error")

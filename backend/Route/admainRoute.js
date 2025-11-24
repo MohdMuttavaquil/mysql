@@ -5,6 +5,6 @@ const admainRoute = express.Router()
 
 admainRoute.post('/login', adamin)
 admainRoute.post('/getlist', getList)
-admainRoute.post('/varify', verifyUser)
+admainRoute.post('/verify', verifyUser)
 
 export default admainRoute
