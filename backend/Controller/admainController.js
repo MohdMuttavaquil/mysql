@@ -40,4 +40,15 @@ const verifyUser =  async(req, res)=>{
     }
 }
 
-export { adamin, getList, verifyUser }
+const unverifyStudants = async(req, res)=>{
+
+    try {
+        const [result] = await pool.execute(`select * from users where varify = "not verify"`)
+        res.json(result)
+    } catch (error) {
+        console.log(error)
+        res.json("some error")
+    }
+}
+
+export { adamin, getList, verifyUser, unverifyStudants }

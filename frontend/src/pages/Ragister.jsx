@@ -43,18 +43,18 @@ function Radister() {
           <p className="text-lg text-green-600">{result}</p>
 
           <label> <p>Enter Name</p>
-            <input type="text" name="name" onChange={handleChange} value={data.name} className="outline-none border-b-2 border-black" />
+            <input type="text" name="name" onChange={handleChange} value={data.name} className="outline-none border-b-2 border-black" required />
           </label>
           <label><p>Enter Email</p>
-            <input type="email" name="email" onChange={handleChange} value={data.email} className="outline-none border-b-2 border-black" />
+            <input type="email" name="email" onChange={handleChange} value={data.email} className="outline-none border-b-2 border-black" required />
           </label>
 
           <label> <p>Enter Class</p>
-            <input type="text" name="userClass" onChange={handleChange} value={data.userClass} className="outline-none border-b-2 border-black" />
+            <input type="text" name="userClass" onChange={handleChange} value={data.userClass} className="outline-none border-b-2 border-black" required />
           </label>
 
           <label> <p>Enter Roll Number</p>
-            <input type="number" name="rollNo" onChange={handleChange} value={data.rollNo} className="outline-none border-b-2 border-black" />
+            <input type="number" name="rollNo" onChange={handleChange} value={data.rollNo} className="outline-none border-b-2 border-black" required />
           </label>
 
           <br></br>
